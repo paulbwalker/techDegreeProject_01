@@ -45,19 +45,22 @@ function getRandomQuote() {
 	
 	return makeQuote;	
 }
-
+// A self contain color changer function when called.
 function bgColor() {
+// Array to contain color names that the browser can recognize.
 	var colors = [ 'maroon','blue', 'orange', 'teal', 'gray', 'purple' ];
+// Get randon color from the array.
 	var getRandomColor = Math.floor( Math.random() * colors.length );
+// Assign a local variable to make color.
 	var makeColor = colors[getRandomColor];
-	
+// Returns make color to body tag of the html.
 	return document.body.style.backgroundColor = makeColor;
 } 
 
 function printQuote() { 
 // Assign local variable that getRandomQuote() function when its called.
 	var printMakeQuote = getRandomQuote();
-// Assign local variable that getRandomQuote() function when its called.
+// Assign local variable that getRandomColor() function when its called.
 	var bgRandomColor = bgColor();
 // If there is a citation property on the quotes property it will display this variable.
 	var getCitation = isThereCitation(printMakeQuote.citation);
@@ -67,8 +70,7 @@ function printQuote() {
 	var getTags = getTagQuotes(printMakeQuote.tag);
 // Anonymous function to be used if object propery year is in the quote.
 	function isThereYear(objectProp) {	
-		if ( objectProp !== undefined ) {
-			
+		if ( objectProp !== undefined ) {		
 			return '<span class="year">' + objectProp + '</span>';			
 		} else {
 			return '';
@@ -82,7 +84,7 @@ function printQuote() {
 			return '';
 		}		
 	}
-
+// Anonymous function used if tag propery is in the object. An h2 tag displays in the Div tag with quote-box tag.
 	function getTagQuotes(objectProp) {
 		if ( objectProp !== undefined ) {
 			return '<h2>' + objectProp + '</2>';
@@ -103,6 +105,7 @@ function printQuote() {
 // when user clicks anywhere on the button, the "printQuote" function is called
  document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+// Add setInterval to display different quote and background color every 10 sec.
  setInterval(printQuote, 10000);
 
 
