@@ -1,1 +1,2 @@
-# techDegreeProject_01
+# Tech Degree Project 1
+
