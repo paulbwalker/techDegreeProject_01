@@ -56,6 +56,14 @@ body {
   content: ", ";
   font-style: normal;
 }
+.tag {
+  font-size: 1.25em;
+  word-spacing: 0.10em;
+  text-align: right;
+  margin-right: 4em;
+  padding-left: .75em;
+  text-transform: uppercase;
+}
 
 #loadQuote {
   position: fixed;
