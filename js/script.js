@@ -52,8 +52,8 @@ const quotes = [
   }
 ];
 
-// Create a function with 2 parameter that takes the low/high numbers for the rgb
-// function
+// Create a function with Math random/floor method with 2 parameter that 
+// takes the low/high numbers for the rgb function
 
 const randomNum = (low, high) => {
   return Math.floor(Math.random() * high) + low;
@@ -96,7 +96,7 @@ const printQuote = () => {
   getRandomColor();
 }
 
-setInterval(printQuote, 30000);
+setInterval(printQuote, 20000);
 
 // This line of code came with the project. Didn't change anything to make it work.
 
